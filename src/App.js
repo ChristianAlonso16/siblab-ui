@@ -1,13 +1,19 @@
-import './App.css';
-import React, {Component} from  'react';
-import { Login } from './pages/Login';
+import { AppRouter } from './main/routes/AppRouter';
+import {AuthProvider} from './main/auth/AuthProvider'
 
 function App() {
+
+
+
   return (
-    <div className="App">
-      <Login />
-      </div>
-  );
+    <AuthProvider>
+	  <AppRouter/>
+    </AuthProvider>
+  )
+
+
 }
+
+
 
 export default App;
